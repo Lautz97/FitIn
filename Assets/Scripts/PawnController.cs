@@ -32,7 +32,6 @@ public class PawnController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.collider.name);
         if (collision.collider.CompareTag("Obstacle"))
         {
             SceneManager.LoadScene(0, LoadSceneMode.Single);
@@ -41,7 +40,6 @@ public class PawnController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log(other.name);
         if (other.CompareTag("Hole"))
         {
             uiMan.AddPoint();
